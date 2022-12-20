@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    width:1366px;
+    height: 663px;
+}
+.header{
+    display: flex;
+    height:15%;
+    background-color: #fff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.21);
+    box-shadow: 0 0 20px #ccc;
+    padding: 0 0 0 1%;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    width:65%;
+    align-items: center;
+}
+.logoicon{
+    width:10%;
+}
+.brandname{
+    font-family: 'Bebas Neue';
+    font-size: 25px;
+    font-weight: 500;
+    width: 10%;
+    text-align: center;
+    color: rgb(251, 10, 10);
+} 
+.buttonpanel{
+    display: flex;
+    padding-right: 2%;
+    display: flex;
+    width: 15%;
+    height:100%;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.login_form{
+    width:40%;
+    height:40%;
+}
+.loginbutton{
+    display: flex;
+    align-items: center;
+    font-family: 'Alegreya Sans SC';
+    font-size: 20px;
+    font-weight: 700;
+    width:100%;
+    height:100%;
+    text-align: center;
+    justify-content:center ;
+    border-radius: 7px;
+    background-color:rgb(253, 253, 253);
+    border: thin;
+}
+.loginbutton:hover{
+    background-color:rgb(201, 201, 201);
+}
+.signup_form{
+    width:40%;
+    height:40%;
+}
+.signupbutton{
+    display: flex;
+    align-items: center;
+    font-family: 'Alegreya Sans SC';
+    font-size: 20px;
+    font-weight: 700;
+    width:100%;
+    height:100%;
+    text-align: center;
+    justify-content:center ;
+    border-radius: 7px;
+    color:white;
+    border: thin;
+    background-color: rgb(251, 10, 10)
+}
+.signupbutton:hover{
+    background-color:rgb(219, 0, 0);
+}
+.contentarea{
+    height:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imgdiv{
+    display: flex;
+    align-items: center;
+    height:40%;
+    width: 100%;
+}
+.foodimage{
+    width:100%;
+    height:80%;
+}
+.contentbox{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    align-items: center;
+}
+.quote{
+    display: flex;
+    height: 60%;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+}
+.sentence{
+    font-family: "Akaya Kanadaka";
+    font-size: 75px;
+    text-align: center;
+    color: rgb(251, 10, 10);
+    width:70%;
+}
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+.planbutton{
+    display: flex;
+    align-items: center;
+    font-family: 'Alegreya SC';
+    font-size: 30px;
+    font-weight: 600;
+    width: 30%;
+    height: 75%;
+    text-align: center;
+    justify-content:space-evenly;
+    border-radius: 8px;
+    color:rgb(88,14,14);
+    border: thin;
+    background-color: rgb(251, 198, 10);
+}
+.planbutton:hover{
+    background-color:rgb(224, 222, 60);
+}
