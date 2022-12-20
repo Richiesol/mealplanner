@@ -48,9 +48,10 @@ body {
 .innerbox{
     display:flex;
     width:80%;
-    height:75%;
+    height:80%;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 }
 .signupinnerbox{
     display:flex;
@@ -62,7 +63,7 @@ body {
 .textbox{
     display:flex;
     height:15%;
-    width:100%;
+    width:90%;
 }
 .signuptextbox{
     display:flex;
@@ -74,8 +75,8 @@ input:focus{
 }
 .signin_text{
     font-family:"Alegreya";
-    font-size: 25px;
-    font-weight: 500px;
+    font-size: 30px;
+    font-weight: 600px;
     width:100%;
     text-align: center;
 }
