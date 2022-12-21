@@ -26,18 +26,19 @@
     </div>
     <div class="contentarea">
         <div class="contentbox">
-          <form action="main.html" class="signupinnerbox">
+          <form class="signupinnerbox" id="signup" onsubmit="submit_()">
             <div class="signuptextbox">
                 <label for="signin_text" class="signin_text">Sign up</label>
               </div>
               <div class="signuptextbox inputbox">
-                <input type="text" class="email fullname" placeholder="Nickname"  size="64" maxlength="15" minlength="5" required/>
+                <input type="text" class="email fullname" placeholder="Nickname"  size="64" maxlength="15" minlength="5" required id="nickname"/>
               </div>
             <div class="signuptextbox inputbox">
               <img src="images/Vectormail.png" alt="" class="mailicon" />
               <input
                 type="email"
                 class="email"
+                id="email"
                 placeholder="Username"
                 size="64"
                 maxlength="30"
@@ -46,17 +47,18 @@
             </div>
             <div class="signuptextbox inputbox">
               <img src="images/Vectorlock.png" alt="" class="passwordicon" />
-              <input type="password" class="password" placeholder="Password" size="64"
+              <input type="password" class="password" id="password" placeholder="Password" size="64"
               maxlength="30"
               required />
             </div>
             <div class="signuptextbox">
               <div class="signup">
-                <button for="signupbutton" class="signupforfree">Sign up</button>
+                <button type="submit" id="signupbutton" class="signupforfree">Sign up</button>
               </div>
             </div>
           </form>
         </div>
     </div>
+    <script src="main.js"></script>
     </body>
     </html>
