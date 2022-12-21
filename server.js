@@ -26,3 +26,6 @@ app.post("/datasend", (req, res) => {
     console.log("New data added");
   });
 });
+// app.get("/redirect",(req,res)=>{
+//   res.sendFile("C:/Users/richie.soshan/Desktop/mini_pro/meal_planner/main.html");
+// })
