@@ -43,10 +43,63 @@
         <div class="box">
           <div class="innerbox">
             <img src="images/Rectangle 16food_image.png" class="dish_image">
-            <label class="dishname">Chapathi & Curry</label>
+            <label class="dishname" id="dishname">Chapathi & Curry</label>
             <div class="buttonpannel">
-              <button class="edit">Edit</button>
-              <button class="start">Start Cooking</button>
+              <button class="edit" id="edit">Edit</button>
+              <div id="myModal" class="modal">
+                <div class="modalbox">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="editcontent">
+                      <img src="images/Rectangle 16food_image.png" class="editboximage">
+                      <label class="currentdishname" id="currentdishname">Chapathi & Curry</label>
+                      <div class="receipetime">
+                        <label class="cookingtime">Cooking Time : </label>
+                        <label for="duration" class="duration">10 min</label>
+                      </div>
+                      <div class="changemenu">
+                        <label for="changedish" class="changedish" id="changedish">
+                          Change dish :
+                        </label>
+                        <input type="text"  class="changedishtextbox" value="Chapathi & Curry" list="breakfastnames" id="name_of_breakfast">
+                        <datalist id="breakfastnames">
+                          <option>
+                            Dosa & Sambar
+                          </option>
+                          <option>
+                            Poori - Potato Masal
+                          </option>
+                          <option>
+                            Pongal & Chutney
+                          </option>
+                          <option>
+                            Puttu & Kadale curry
+                          </option>
+                        </datalist>
+                      </div>
+                      <button id="changebutton" class="changebutton" onclick="changedish()">Change</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="start" id="startcookingbutton">Start Cooking</button>
+              <div id="startcookingmodal" class="modal">
+                <div class="modalbox">
+                  <div class="start-cooking-modal-content">
+                    <span class="closemodal">&times;</span>
+                    <div class="receipe-content">
+                      <div class="receipe">
+                        <label for="title" id="recipetitle" class="recipetitle"></label>
+                        <p id="text" class="receipetext"></p>
+                      </div>
+                      <div class="imagecontainer">
+                        <img src="images/circle-arrow-left-solid.svg" alt="" class="arrowimage" id="leftarrow">
+                        <img src="images/circle-arrow-right-solid.svg" alt="" class="arrowimage" id="rightarrow">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <label for="breakfast" class="menu_text">Breakfast</label>
@@ -273,5 +326,6 @@
         
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
