@@ -100,6 +100,14 @@
                 class="arrowimage"
                 id="leftarrow"
               />
+              <div class="time" id="time">
+                <div for="timer" class="timer">
+                  <label  id="minutes" contenteditable="true">00</label>:
+                  <label  id="seconds" contenteditable="true">00</label>
+                </div>
+                <img src="images/Vector.png" alt="" class="play" id="play"/>
+                <img src="images/circle-stop-solid (1) 1stop_button.png" alt="" class="pause" id="pause"/>
+              </div>
               <img
                 src="images/circle-arrow-right-solid.svg"
                 alt=""
@@ -144,7 +152,7 @@
         <div class="box">
           <div class="innerbox">
             <img src="images/Rectangle 16food_image.png" class="dish_image" />
-            <label class="dishname" id="dishname">Chapathi & Curry</label>
+            <label class="dishname breakfastdish" id="dishname">Chapathi & Curry</label>
             <div class="buttonpannel">
               <button class="edit" id="edit" onclick="buttonclick(event)">
                 Edit
@@ -163,7 +171,7 @@
         <div class="box">
           <div class="innerbox">
             <img src="images/Rectangle 16food_image.png" class="dish_image" />
-            <label class="dishname">Rice & Sambar</label>
+            <label class="lunchdish dishname" id="lunchtoday">Rice & Sambar</label>
             <div class="buttonpannel">
               <button class="edit" onclick="buttonclick(event)">Edit</button>
               <button class="start" onclick="startcooking(event)">
@@ -176,7 +184,7 @@
         <div class="box">
           <div class="innerbox">
             <img src="images/Rectangle 16food_image.png" class="dish_image"/>
-            <label class="dishname">Idly & Chutney</label>
+            <label class="dinnerdish dishname" id="dinnertoday">Idly & Chutney</label>
             <div class="buttonpannel">
               <button class="edit" onclick="buttonclick(event)">Edit</button>
               <button class="start" onclick="startcooking(event)">
@@ -197,6 +205,9 @@
       <div class="table">
         <div class="weekdays">
           <div class="days space">
+            <label for="day" class="day">Sunday</label>
+          </div>
+          <div class="days">
             <label for="day" class="day">Monday</label>
           </div>
           <div class="days">
@@ -214,9 +225,7 @@
           <div class="days">
             <label for="day" class="day">Satuday</label>
           </div>
-          <div class="days">
-            <label for="day" class="day">Sunday</label>
-          </div>
+          
         </div>
         <div class="meal">
           <div class="breakfast">
@@ -225,37 +234,37 @@
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext" id="sunday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext" id="sunday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext" id="monday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext" id="tuesday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext" id="wednesday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext" id="friday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+              <label for="maindish" class="dishtext"id="saturday-breakfast">Chapathi & Curry</label>
             </button>
           </div>
         </div>
@@ -266,37 +275,37 @@
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext" id="sunday-lunch">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext"  id="monday-lunch">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext"  id="tuesday-lunch">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext"  id="wednesday-lunch">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext"  id="thursday-lunch">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext"  id="friday-lunch">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Rice & Sambar</label>
+              <label for="maindish" class="dishtext"  id="saturday-lunch">Rice & Sambar</label>
             </button>
           </div>
         </div>
@@ -307,37 +316,37 @@
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label>
+              <label for="maindish" class="dishtext"  id="sunday-dinner">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label>
+              <label for="maindish" class="dishtext" id="monday-dinner">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label>
+              <label for="maindish" class="dishtext" id="tuesday-dinner">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label>
+              <label for="maindish" class="dishtext" id="wednesday-dinner">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label>
+              <label for="maindish" class="dishtext" id="thurday-dinner">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label>
+              <label for="maindish" class="dishtext" id="friday-dinner">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton" onclick="weekdishbutton(event)">
-              <label for="maindish" class="dishtext">Idly & Chutney</label> 
+              <label for="maindish" class="dishtext"id="saturday-dinner">Idly & Chutney</label> 
             </button>
           </div>
         </div>

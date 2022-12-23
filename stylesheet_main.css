@@ -419,6 +419,36 @@ button{
   justify-content: space-between;
   height: 20%;
   display: flex;
+  
+}
+.time {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  width: 25%;
+  height: 40%;
+}
+.timer {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  height: 50%;
+  font-size: 25px;
+  font-family: "Alatsi";
+  align-items: center;
+
+}
+.play {
+  display:block;
+  width: 25%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+.pause{
+  display:none;
+  width: 25%;
+  padding-right: 2%;
+  padding-left: 2%;
 }
 .arrowimage{
   height: 50%;

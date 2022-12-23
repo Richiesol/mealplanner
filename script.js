@@ -16,7 +16,15 @@ var recipetitle = document.getElementById("recipetitle");
 var leftarrow = document.getElementById("leftarrow");
 var rightarrow = document.getElementById("rightarrow");
 var weekDayDishText = document.getElementById("weekdish");
+const play_button = document.getElementById("play");
+const pause_button = document.getElementById("pause");
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var timer = document.getElementById("time")
+
 var buttonCount = 0;
+var totalSeconds = 0;
+var count = 0;
 var iter = 0;
 let dishArray;
 var lengthOfRecipe;
@@ -24,6 +32,21 @@ var listOfKeys;
 let dish;
 let weekDaysDishName;
 let mealtype;
+let timer_interval;
+var duration;
+
+
+var days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+var dt = new Date();
+var dayName = days[dt.getDay()].toLocaleLowerCase();
 
 var existingData;
 fetch("http://localhost:8000/receipebook.json")
@@ -45,7 +68,6 @@ function weekdishbuttonclick() {
   weekmenu.style.display = "none";
   dishname = weekDaysDishName;
   changedish.setAttribute("list", mealtype.innerText.toLowerCase());
-  console.log(dishname.innerText);
   currentdishname.innerText = dishname.innerText;
   changedish.value = dishname.innerText;
   modal.style.display = "block";
@@ -93,15 +115,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-function change_dish(event) {
-  let target = event.target;
-  let changeDish =
-    target.closest(".editcontent").firstElementChild.nextElementSibling;
-  changeDish.innerText = changedish.value;
-  dishname.innerText = changedish.value;
 
-  modal.style.display = "none";
-}
 leftarrow.onclick = function leftarrowclick() {
   if (buttonCount <= 0 && iter == 0) {
     buttonCount = 0;
@@ -133,6 +147,30 @@ rightarrow.onclick = function rightarrowclick() {
     displayRecipe(dish);
   }
 };
+
+
+function change_dish(event) {
+  let target = event.target;
+  let changeDish =
+    target.closest(".editcontent").firstElementChild.nextElementSibling;
+  let dishId = dishname.getAttribute("id");
+  let dishclass = dishname.getAttribute("class")
+  changeDish.innerText = changedish.value;
+  dishname.innerText = changedish.value;
+  if(dishId.includes(dayName)) {
+    let meal = dishId.replace(`${dayName}-`, "");
+    document.getElementsByClassName(`${meal}dish`)[0].innerText =
+      changedish.value;
+  }
+  else if(dishclass.includes('dishname')){
+    let mealdish = dishclass.replace("dishname ","");
+    let mealtime = mealdish.split('dish')[0];
+    document.getElementById(`${dayName}-${mealtime}`).innerText = changedish.value;
+    
+  }
+
+  modal.style.display = "none";
+}
 function recipe(dishname) {
   listOfKeys = Object.keys(existingData[dishname]);
   lengthOfRecipe = listOfKeys.length;
@@ -140,8 +178,51 @@ function recipe(dishname) {
   displayRecipe(dishname);
 }
 function displayRecipe(dishname) {
-  // console.log(buttonCount)
   recipetitle.innerText = listOfKeys[buttonCount];
   var dishrecipe = existingData[dishname][listOfKeys[buttonCount]];
   receipetext.innerText = dishrecipe;
+  if(dishrecipe.includes('minutes')){
+    var startIndex= dishrecipe.indexOf("minutes")-3;
+    duration = dishrecipe.substring(startIndex,dishrecipe.indexOf("minutes")).trim();
+    minutesLabel.innerText = pad(duration);
+    timer.style.display = "flex"
+  }
+  else{
+    timer.style.display = "none"
+  }
+}
+
+play_button.addEventListener("click", function () {
+  start_timer();
+  play_button.style.display = "none";
+  pause_button.style.display = "block";
+});
+pause_button.addEventListener("click", function () {
+  count++;
+  stop_timer(minutesLabel, secondsLabel);
+  pause_button.style.display = "none";
+  play_button.style.display = "block";
+});
+
+function start_timer() {
+  timer_interval = setInterval(setTime, 1000);
+}
+function stop_timer(min, sec) {
+  clearInterval(timer_interval);
+  sec.innerHTML = "00";
+  min.innerHTML = pad(duration);
+  totalSeconds = 0;
+}
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
 }
