@@ -290,19 +290,25 @@ body{
     justify-content: space-between;
 }
 /* The Close Button */
-.close,.closemodal {
-  color: #aaaaaa;
+.close,.closemodal,.closedish {
+  color: #000000;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  border:none;
+  align-self: self-start;
+  height: fit-content;
 }
-
+button{
+  cursor:pointer
+}
 .close:hover,
 .close:focus ,.closemodal:hover,
 .closemodal:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
 }
 .editcontent{
   display: flex;
@@ -311,6 +317,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 .editbox{
   width:85%;
   height:30%;
@@ -417,4 +424,11 @@ body{
   font-size: 20px;
   font-family: "Alegreya SC";
   font-weight: 600;
+}
+.viewdish{
+  align-self: center;
+}
+.closedish{
+  align-self: self-start;
+  height: fit-content;
 }

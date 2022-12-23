@@ -27,6 +27,107 @@
     />
   </head>
   <body>
+    <div id="myModal" class="modal">
+      <div class="modalbox">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="editcontent">
+            <img src="images/Rectangle 16food_image.png" class="editboximage" />
+            <label class="currentdishname" id="currentdishname"
+              >Chapathi & Curry</label
+            >
+            <div class="receipetime">
+              <label class="cookingtime">Cooking Time : </label>
+              <label for="duration" class="duration">10 min</label>
+            </div>
+            <div class="changemenu">
+              <label for="changedish" class="changedish" id="changedish">
+                Change dish :
+              </label>
+              <input
+                type="text"
+                class="changedishtextbox"
+                value="Chapathi & Curry"
+                id="name_of_breakfast"
+              />
+              <datalist id="breakfast">
+                <option>Dosa & Sambar</option>
+                <option>Poori & Potato Masal</option>
+                <option>Pongal & Chutney</option>
+                <option>Puttu & Kadale curry</option>
+              </datalist>
+              <datalist id="lunch">
+                <option>Rice & Sambar</option>
+                <option>Rice & Rasam</option>
+                <option>Rice & Dhal</option>
+                <option>Rice & Greengram</option>
+              </datalist>
+              <datalist id="dinner">
+                <option>Dosa & Sambar</option>
+                <option>Chapathi & Potato Masal</option>
+                <option>Pongal & Chutney</option>
+                <option>Idly & Chutney</option>
+              </datalist>
+            </div>
+            <button
+              id="changebutton"
+              class="changebutton"
+              onclick="change_dish(event)"
+            >
+              Change
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="startcookingmodal" class="modal">
+      <div class="modalbox">
+        <div class="start-cooking-modal-content">
+          <span class="closemodal">&times;</span>
+          <div class="receipe-content">
+            <div class="receipe">
+              <label
+                for="title"
+                id="recipetitle"
+                class="recipetitle"
+              ></label>
+              <p id="text" class="receipetext"></p>
+            </div>
+            <div class="imagecontainer">
+              <img
+                src="images/circle-arrow-left-solid.svg"
+                alt=""
+                class="arrowimage"
+                id="leftarrow"
+              />
+              <img
+                src="images/circle-arrow-right-solid.svg"
+                alt=""
+                class="arrowimage"
+                id="rightarrow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="weekmodal" class="modal">
+      <div class="modalbox">
+        <div class="modal-content">
+          <button class="closedish">&times;</button>
+          <div class="innerbox viewdish">
+            <img src="images/Rectangle 16food_image.png" class="dish_image" />
+            <label class="dishname">Rice & Sambar</label>
+            <div class="buttonpannel">
+              <button class="edit" onclick="buttonclick(event)">Edit</button>
+              <button class="start" onclick="startcooking(event)">
+                Start Cooking
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="header">
       <div class="logo">
         <label for="brandname" class="brandname">What's Cooking?</label>
@@ -42,86 +143,45 @@
       <div class="boxcontainer">
         <div class="box">
           <div class="innerbox">
-            <img src="images/Rectangle 16food_image.png" class="dish_image">
+            <img src="images/Rectangle 16food_image.png" class="dish_image" />
             <label class="dishname" id="dishname">Chapathi & Curry</label>
             <div class="buttonpannel">
-              <button class="edit" id="edit">Edit</button>
-              <div id="myModal" class="modal">
-                <div class="modalbox">
-                  <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div class="editcontent">
-                      <img src="images/Rectangle 16food_image.png" class="editboximage">
-                      <label class="currentdishname" id="currentdishname">Chapathi & Curry</label>
-                      <div class="receipetime">
-                        <label class="cookingtime">Cooking Time : </label>
-                        <label for="duration" class="duration">10 min</label>
-                      </div>
-                      <div class="changemenu">
-                        <label for="changedish" class="changedish" id="changedish">
-                          Change dish :
-                        </label>
-                        <input type="text"  class="changedishtextbox" value="Chapathi & Curry" list="breakfastnames" id="name_of_breakfast">
-                        <datalist id="breakfastnames">
-                          <option>
-                            Dosa & Sambar
-                          </option>
-                          <option>
-                            Poori - Potato Masal
-                          </option>
-                          <option>
-                            Pongal & Chutney
-                          </option>
-                          <option>
-                            Puttu & Kadale curry
-                          </option>
-                        </datalist>
-                      </div>
-                      <button id="changebutton" class="changebutton" onclick="changedish()">Change</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="start" id="startcookingbutton">Start Cooking</button>
-              <div id="startcookingmodal" class="modal">
-                <div class="modalbox">
-                  <div class="start-cooking-modal-content">
-                    <span class="closemodal">&times;</span>
-                    <div class="receipe-content">
-                      <div class="receipe">
-                        <label for="title" id="recipetitle" class="recipetitle"></label>
-                        <p id="text" class="receipetext"></p>
-                      </div>
-                      <div class="imagecontainer">
-                        <img src="images/circle-arrow-left-solid.svg" alt="" class="arrowimage" id="leftarrow">
-                        <img src="images/circle-arrow-right-solid.svg" alt="" class="arrowimage" id="rightarrow">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button class="edit" id="edit" onclick="buttonclick(event)">
+                Edit
+              </button>
+              <button
+                class="start"
+                id="startcookingbutton"
+                onclick="startcooking(event)"
+              >
+                Start Cooking
+              </button>
             </div>
           </div>
           <label for="breakfast" class="menu_text">Breakfast</label>
         </div>
         <div class="box">
           <div class="innerbox">
-            <img src="images/Rectangle 16food_image.png" class="dish_image">
-            <label class="dishname">Chapathi & Curry</label>
+            <img src="images/Rectangle 16food_image.png" class="dish_image" />
+            <label class="dishname">Rice & Sambar</label>
             <div class="buttonpannel">
-              <button class="edit">Edit</button>
-              <button class="start">Start Cooking</button>
+              <button class="edit" onclick="buttonclick(event)">Edit</button>
+              <button class="start" onclick="startcooking(event)">
+                Start Cooking
+              </button>
             </div>
           </div>
           <label for="breakfast" class="menu_text">Lunch</label>
         </div>
         <div class="box">
           <div class="innerbox">
-            <img src="images/Rectangle 16food_image.png" class="dish_image">
-            <label class="dishname">Chapathi & Curry</label>
+            <img src="images/Rectangle 16food_image.png" class="dish_image"/>
+            <label class="dishname">Idly & Chutney</label>
             <div class="buttonpannel">
-              <button class="edit">Edit</button>
-              <button class="start">Start Cooking</button>
+              <button class="edit" onclick="buttonclick(event)">Edit</button>
+              <button class="start" onclick="startcooking(event)">
+                Start Cooking
+              </button>
             </div>
           </div>
           <label for="breakfast" class="menu_text">Dinner</label>
@@ -160,170 +220,128 @@
         </div>
         <div class="meal">
           <div class="breakfast">
-            <img src="images/breakfast.png" alt="" class="breakfast_image">
+            <img src="images/breakfast.png" alt="" class="breakfast_image" />
             <label for="breakfast" class="meal_label">Breakfast</label>
           </div>
           <div class="dish">
-            <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
+             
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton()">
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
-            </button>
-          </div>
-          <div class="dish">
-            <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Chapathi & Curry</label>
             </button>
           </div>
         </div>
         <div class="meal lunch">
           <div class="breakfast">
-            <img src="images/fried-rice.png" alt="" class="breakfast_image">
+            <img src="images/fried-rice.png" alt="" class="breakfast_image" />
             <label for="breakfast" class="meal_label">Lunch</label>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Rice & Sambar</label>
             </button>
           </div>
         </div>
         <div class="meal dinner">
           <div class="breakfast">
-            <img src="images/meal.png" alt="" class="breakfast_image">
+            <img src="images/meal.png" alt="" class="breakfast_image" />
             <label for="breakfast" class="meal_label">Dinner</label>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label>
             </button>
           </div>
           <div class="dish">
             <button class="dishbutton">
-              <label for="maindish" class="dishtext">Chapathi</label>
-              <label for="seperator" class="dishtext">|</label> 
-              <label for="sidedish" class="dishtext">Gravy</label> 
+              <label for="maindish" class="dishtext">Idly & Chutney</label> 
             </button>
           </div>
         </div>
-        
       </div>
     </div>
     <script src="script.js"></script>
