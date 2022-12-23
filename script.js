@@ -1,3 +1,5 @@
+"use strict";
+
 var modal = document.getElementById("myModal");
 var weekmenu = document.getElementById("weekmodal");
 var startcookingmodal = document.getElementById("startcookingmodal");
@@ -13,7 +15,7 @@ var dishname = document.getElementById("dishname");
 var recipetitle = document.getElementById("recipetitle");
 var leftarrow = document.getElementById("leftarrow");
 var rightarrow = document.getElementById("rightarrow");
-
+var weekDayDishText = document.getElementById("weekdish");
 var buttonCount = 0;
 var iter = 0;
 let dishArray;
@@ -21,6 +23,7 @@ var lengthOfRecipe;
 var listOfKeys;
 let dish;
 let weekDaysDishName;
+let mealtype;
 
 var existingData;
 fetch("http://localhost:8000/receipebook.json")
@@ -29,21 +32,40 @@ fetch("http://localhost:8000/receipebook.json")
     existingData = json;
   });
 
-function weekdishbutton(event){
+function weekdishbutton(event) {
   let target = event.target;
   weekDaysDishName = target.closest(".dishbutton").firstElementChild;
-  dishname.innerText = weekDaysDishName.innerText;
-  console.log(dishname,weekDaysDishName.innerText)
+  weekDayDishText.innerText = weekDaysDishName.innerText;
   weekmenu.style.display = "block";
+  mealtype =
+    target.closest(".meal").firstElementChild.firstElementChild
+      .nextElementSibling;
+}
+function weekdishbuttonclick() {
+  weekmenu.style.display = "none";
+  dishname = weekDaysDishName;
+  changedish.setAttribute("list", mealtype.innerText.toLowerCase());
+  console.log(dishname.innerText);
+  currentdishname.innerText = dishname.innerText;
+  changedish.value = dishname.innerText;
+  modal.style.display = "block";
+}
+function weekDishStartCooking(event) {
+  weekmenu.style.display = "none";
+  let target = event.target;
+  dishname = target.closest(".innerbox").firstElementChild.nextElementSibling;
+  dish = dishname.innerText;
+  dishArray = dish.split("&");
+  dish = dishArray[0].trim();
+  recipe(dish);
+  startcookingmodal.style.display = "block";
 }
 
 function buttonclick(event) {
   let target = event.target;
   dishname = target.closest(".innerbox").firstElementChild.nextElementSibling;
   let mealtype = target.closest(".box").lastElementChild;
-  changedish.setAttribute("list",mealtype.innerText.toLowerCase())
-  console.log(changedish);
-  // currentdishname.innerText = dishname.innerText;
+  changedish.setAttribute("list", mealtype.innerText.toLowerCase());
   changedish.value = dishname.innerText;
   modal.style.display = "block";
 }
@@ -77,7 +99,7 @@ function change_dish(event) {
     target.closest(".editcontent").firstElementChild.nextElementSibling;
   changeDish.innerText = changedish.value;
   dishname.innerText = changedish.value;
-  
+
   modal.style.display = "none";
 }
 leftarrow.onclick = function leftarrowclick() {
