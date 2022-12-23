@@ -13,6 +13,7 @@ var closedish = document.getElementsByClassName("closedish")[0];
 var closebutton = document.getElementsByClassName("closemodal")[0];
 var dishname = document.getElementById("dishname");
 var recipetitle = document.getElementById("recipetitle");
+var recipename = document.getElementById("recipename");
 var leftarrow = document.getElementById("leftarrow");
 var rightarrow = document.getElementById("rightarrow");
 var weekDayDishText = document.getElementById("weekdish");
@@ -82,7 +83,6 @@ function weekDishStartCooking(event) {
   recipe(dish);
   startcookingmodal.style.display = "block";
 }
-
 function buttonclick(event) {
   let target = event.target;
   dishname = target.closest(".innerbox").firstElementChild.nextElementSibling;
@@ -91,24 +91,39 @@ function buttonclick(event) {
   changedish.setAttribute("list", mealtype.innerText.toLowerCase());
   changedish.value = dishname.innerText;
   modal.style.display = "block";
+  
 }
 function startcooking(event) {
   let target = event.target;
   dishname = target.closest(".innerbox").firstElementChild.nextElementSibling;
   dish = dishname.innerText;
-  console.log(dish);
   dishArray = dish.split("&");
   dish = dishArray[0].trim();
   recipe(dish);
   startcookingmodal.style.display = "block";
 }
+
+changedish.addEventListener("change",function(){
+  if(changedish.value==""){
+    changebutton.disabled ="disabled";
+  }
+  else{
+    changebutton.removeAttribute("disabled");
+  }
+  })
 span1.onclick = function close() {
+  buttonCount= 0;
+  iter=0;
   modal.style.display = "none";
 };
 closedish.onclick = function close() {
+  buttonCount= 0;
+  iter=0;
   weekmenu.style.display = "none";
 };
 closebutton.onclick = function close() {
+  buttonCount = 0;
+  iter=0;
   startcookingmodal.style.display = "none";
 };
 window.onclick = function (event) {
@@ -175,10 +190,12 @@ function change_dish(event) {
 function recipe(dishname) {
   listOfKeys = Object.keys(existingData[dishname]);
   lengthOfRecipe = listOfKeys.length;
+  recipename.innerText = dishname;
   recipetitle.innerText = listOfKeys[buttonCount];
   displayRecipe(dishname);
 }
 function displayRecipe(dishname) {
+  
   recipetitle.innerText = listOfKeys[buttonCount];
   var dishrecipe = existingData[dishname][listOfKeys[buttonCount]];
   receipetext.innerText = dishrecipe;

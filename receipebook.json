@@ -6,11 +6,11 @@
     "Step 3 : Cook the chapati": "Once heated enough, put the chapati on the pan and cook from both sides. Use a pair of tongs to flip over to the other side. Keep the flame to medium as too much heat might burn the chapati. Check for the little brown spots. Once they start appearing, the chapati will start to puff, indicating that it's completely cooked. Once done, transfer in a kitchen towel to keep them warm. Serve along any gravy or curry of your choice.",
     "Step 4: Note": "If you are someone who loves the richness of Ghee, then you can add some ghee while kneading the dough and with a pinch of salt this adds a nice aroma and taste to the Chapatis."
   },
-  "Curry":{
+  "Curry": {
     "Ingredients": "+ 3 Potatoes\n+ 2 onions\n+ 1 tomato Big\n+ 3 green chilies\n+ 1 tbsp oil\n+ 3 cloves\n+ 3 cardamoms\n+ 2 Cinnamon stick 1 Inch Pieces\n+ 1 tsp Ginger garlic paste\n+ 1 strig Curry leaves\n+ 1 pinch Fenugreek powder\n+ 1/2 glass Water\n+ 5 strigs Coriander leaves\n+ 1/2 tsp Salt\n+ 1/2 tsp Chili powder\n+ 1/2 tsp coriander powder\n+ 1/4 tsp Cumin powder\n+ 1/4 tsp garam masala powder\n+ 1/4 tsp Turmeric",
     "Step 1 ": "First, boil potatoes and peel out their skin and cut them into pieces.",
     "Step 2": "Chop onions, tomato, green chilies.",
-    "Step 3":"Heat a pan add oil, cloves, cardamoms, cinnamon sticks, green chilies, onions and ginger-garlic paste, include all one by one and fry them well.",
+    "Step 3": "Heat a pan add oil, cloves, cardamoms, cinnamon sticks, green chilies, onions and ginger-garlic paste, include all one by one and fry them well.",
     "Step 4": "After the onion is fried add tomato and boil it completely.",
     "Step 5": "To the boiled tomato, add all the POWDERS and mix well.    ",
     "Step 6": "Now include chopped potatoes and mix well. Fry for 2 minutes.",
@@ -19,5 +19,127 @@
     "Step 9": "If you want, you can include desiccated coconut.",
     "Step 10": "Switch off the stove when it boils completely",
     "Step 11": "Delicious potato curry is all set to serve with rotis."
-  }
+  },
+  "Dosa": {
+    "Ingredients": "1 cup rava/semolina / suji (coarse)\n + 2 tbsp rice flour\n + 2 tbsp wheat flour\n + 2 tbsp oil (hot)\n + 1 cup curd\n + 1 tsp sugar\n + ½ tsp salt\n + 1 cup water (or as required)\n + ¼ tsp baking soda\n + oil (for roasting)",
+    "Step 1 ": "firstly, in a blender take 1 cup rava and blend to a fine powder. ",
+    "Step 2": "transfer the powdered rava into a large bowl",
+    "Step 3": "add 2 tbsp rice flour, 2 tbsp wheat flour and mix well.",
+    "Step 4": "now add 2 tbsp hot oil and mix well well. adding hot oil to flour helps to get crispy dosa",
+    "Step 5": "further add 1 cup curd, 1 tsp sugar, ½ tsp salt and mix well. adding curd helps to give sourness and activate baking soda.",
+    "Step 6": "add 1 cup water and mix using a whisk",
+    "Step 7": "mix until a smooth lump-free batter is formed.",
+    "Step 8": "rest for 10 minutes helping rava to absorb water.",
+    "Step 9": "now add ¼ tsp baking soda and mix gently.",
+    "Step 10": "pour the dosa over hot tawa and spread gently.",
+    "Step 11": "pour a tsp of oil and roast on medium flame until it turns golden brown..",
+    "Step 12": "scrape the dosa from sides and fold half."
+  },
+  "Sambar": {
+    "Ingredients": "for pressure cooking: \n + ½ cup toor dal (rinsed) \n + ¼ tsp turmeric \n + 1 tsp oil \n + 1½ cup water \n + ½ onion (petals) \n + 1 tomato (cubed) \n + 1 carrot (chopped) \n + 5 beans (chopped) \n + 1 potato (cubed) \n + few drumstick \n + 2 brinjal (chopped) \n + few curry leaves \n + 1 chilli \n + 2½ cup water \n + ½ cup tamarind extract \n + 2 tbsp sambar powder \n + 1 tsp jaggery \n + ½ tsp turmeric \n + 1 tsp salt \n\for tempering:\n + 2 tsp oil\n + 1 tsp mustard\n + 1 tsp urad dal\n + 2 dried red chilli (broken)\n + pinch hing\n + few curry leaves",
+    "Step 1 ": "firstly, in a pressure cooker add ½ cup toor dal, ¼ tsp turmeric, 1 tsp oil and 1½ cup water.",
+    "Step 2": "pressure cook for 5 whistles or until the dal is cooked well.",
+    "Step 3": "once the pressure releases, using a whisk mash the dal smooth.",
+    "Step 4": "now add ½ onion, 1 tomato, 1 carrot, 5 beans, 1 potato, few drumstick and 2 brinjal.",
+    "Step 5": "also add few curry leaves, 1 chilli and 2½ cup water.",
+    "Step 6": "mix well and get to a boil.",
+    "Step 7": "once the water comes to a boil, add ½ cup tamarind extract, 2 tbsp sambar powder, 1 tsp jaggery, ½ tsp turmeric and 1 tsp salt.",
+    "Step 8": "mix well making sure everything is well combined.",
+    "Step 9": "cover and pressure cook for 1 whistle.",
+    "Step 10": "once the pressure releases, open the cooker and check for seasoning and also make sure the vegetables are cooked completely.",
+    "Step 11": "to prepare the tempering, heat 2 tsp oil. add 1 tsp mustard, 1 tsp urad dal, 2 dried red chilli, pinch hing and a few curry leaves.",
+    "Step 12": "splutter the tempering",
+    "Step 13": "pour the tempering over the sambar and mix well.",
+    "Step 14": "finally, enjoy mix veg sambar with hot steamed rice."
+  },
+  "Poori": {
+    "Ingredients": "for poori:\n\n + 2 cup wheat flour\n\n + 1 tbsp rava / semolina / suji (fine)\n\n + ½ tsp sugar\n\n + ½ tsp salt\n\n + 2 tsp oil\n\n + water (for kneading)\n\n + oil (for frying)",
+    "Step 1 ": "firstly, in a large bowl take 2 cup wheat flour, 1 tbsp rava, ½ tsp sugar, ½ tsp salt and 2 tsp oil.",
+    "Step 2": "crumble and mix well making sure the flour is moist.",
+    "Step 3": "now add water and knead the dough.",
+    "Step 4": "knead the dough tight adding water as required.",
+    "Step 5": "now pinch a large ball size dough and roll to form a log.",
+    "Step 6": "cut into pieces and roll them to small balls.",
+    "Step 7": "place the balls into a small bowl and 1 tsp oil. grease the ball to prevent from drying.",
+    "Step 8": "now take a ball and roll using a rolling pin.",
+    "Step 9": "roll to slightly thick thickness.",
+    "Step 10": "drop the rolled dough into the hot oil.",
+    "Step 11": "press until the puri puffs up and splash oil to puff up fully.",
+    "Step 12": "flip over and fry until it turns golden brown.",
+    "Step 13": "finally, drain off the poori and is ready to enjoy with aloo bhaji."
+  },
+  "AlooBhaji": {
+    "Ingredients": "for aloo bhaji:\n\n + 3 potato (peel & cube)\n\n + 1½ cup water\n\n + 2 tbsp oil\n\n + 1 tsp mustard\n\n + 1 tsp urad dal\n\n + 1 tsp chana dal\n\n + 2 dried red chilli (broken)\n\n + pinch hing\n\n + few curry leaves\n\n + 1 inch ginger (finely chopped)\n\n + 2 chilli (slit)\n\n + 1 onion (sliced)\n\n + ¼ tsp turmeric\n\n + ¼ tsp salt\n\n + 1 tbsp lemon juice\n\n + 2 tbsp coriander (finely chopped)",
+    "Step 1 ": "firstly, take 3 cubed potato into the pressure cooker.",
+    "Step 2": "add 1½ cup water, ½ tsp salt and pressure cook for 4 whistles. keep aside.",
+    "Step 3": "now in a large kadai, heat 2 tbsp oil, 1 tsp mustard, 1 tsp urad dal, 1 tsp chana dal, 2 dried red chilli, pinch hing and few curry leaves. splutter the tempering.",
+    "Step 4": "add 1 inch ginger, 2 chilli, 1 onion and saute until onions change colour slightly.",
+    "Step 5": "further add ¼ tsp turmeric, ¼ tsp salt and saute for a minute.",
+    "Step 6": "add pressure cooked aloo and mix well adjusting consistency as required.",
+    "Step 7": "cover and cook for 5 minutes or until flavours are absorbed.",
+    "Step 8": "now add 1 tbsp lemon juice, 2 tbsp coriander and mix well.",
+    "Step 9": "finally, enjoy aloo bhaji with hot and puffy poori."
+  },
+  "Pongal": {
+    "Ingredients": "for pressure cooking:\n\n + 1 tsp ghee / clarified butter\n + ½ cup rice (rinsed)\n+ ½ cup moong dal (rinsed)\n + 4 cup water\n + ½ tsp salt\n for tempering:\n\n + 2 tbsp ghee / clarified butter\n + 1 tsp cumin / jeera\n + ½ tsp pepper (crushed)\n + 1 inch ginger (finely chopped)\n + 2 chilli (slit)\n + 10 cashew / kaju (halves)\n + pinch hing / asafoetida",
+    "Step 1 ": "firstly, in a pressure cooker heat 1 tsp ghee.",
+    "Step 2": "add ½ cup rice, ½ cup moong dal and saute for a minute or until it turns aromatic.",
+    "Step 3": "further, add 4 cup water and ½ tsp salt. mix well.",
+    "Step 4": "cover and pressure cook for 5 whistles on medium flame.",
+    "Step 5": "once the pressure settles down, open the cooker and give a good mix.",
+    "Step 6": "furthermore, in a pan heat 2 tbsp ghee.",
+    "Step 7": "also add 1 tsp cumin, ½ tsp pepper, 1 inch ginger, 2 chilli, 10 cashew and pinch hing.",
+    "Step 8": "saute on low flame until cashew turns golden brown.",
+    "Step 9": "pour the tempering over cooked rice and dal mixture.",
+    "Step 10": "give a good mix, add more ghee if required."
+  },
+  "Chutney": {
+    "Ingredients": "for tomato coconut chutney:\n + 2 tbsp oil\n + 1 tomato (chopped)\n + 2 clove garlic (crushed)\n + 3 dried red chilli\n + ¾ cup coconut (grated)\n + ½ tsp salt\n + ½ cup water",
+    "Step 1 ": "firstly, in a pan heat 2 tbsp oil. add 1 tomato, 2 clove garlic, 3 dried red chilli and saute well.",
+    "Step 2": "saute until the tomato softens well.",
+    "Step 3": "cool completely, and tranfer to a mixer jar.",
+    "Step 4": "add ¾ cup coconut, ½ tsp salt and ½ cup water",
+    "Step 5": "grind to smooth paste.",
+    "Step 6": "add the tempering and enjoy tomato coconut chutney with idli or dosa."
+  },
+  "Rice":{
+    "Ingredients":"1 cup (180 gm) \n long grained rice\nWater",
+    "Step 1 ": "Clean the rice and wash well till the water is clear.",
+    "Step 2": "Soak the rice in 2 cups of water for at least 1/2 hour.",
+    "Step 3": "In a heavy bottomed pan, put the rice and water over high heat and bring to a boil, adding the lemon juice also.",
+    "Step 4": "Once it comes to a boil, cover, and let it simmer over low heat, till cooked through, and the water is absorbed.",
+    "Step 5": "Takes about 10 minutes. Serve hot."
+  },
+  "Rasam":{
+    "Ingredients":"for pepper rasam:\n+ 2 tsp pepper\n+ 1 tsp cumin\n+ ¼ tsp methi\n+ ½ tsp coriander seeds\n+ few curry leaves\n+ 1 tomato (chopped)\n+ few curry leaves\n+ ½ tsp turmeric\n+ 1 tsp salt\n+ 1¼ cup tamarind extract\n+ 5 cup water\n+ 1½ cup toor dal\n+ 2 tbsp coriander (finely chopped) \n for tempering:\n + 3 tsp oil\n + 1 tsp cumin\n + 1 dried red chilli (broken)\n + few curry leaves\n + pinch hing",
+    "Step 1 ": "firstly, to prepare the spice mix, in a pan take 2 tsp pepper, 1 tsp cumin, ¼ tsp methi, ½ tsp coriander seeds and few curry leaves.",
+    "Step 2": "roast on low flame until the spices turn aromatic and curry leaves turn crisp",
+    "Step 3": "cool completely, and grind to a coarse powder. rasam spice mix is ready. keep aside.",
+    "Step 4": "in a large kadai take 1 tomato, few curry leaves, ½ tsp turmeric and 1 tsp salt.",
+    "Step 5": "also, add 1¼ cup tamarind extract and 5 cup water",
+    "Step 6": "mix well, cover and boil for 15 minutes.",
+    "Step 7": "after boiling, the tomato has softened and all the flavours are in the water.",
+    "Step 8": "further, add prepared spice mix, 1½ cup toor dal and get to a boil.",
+    "Step 9": "pour the tempering over the rasam and add 2 tbsp coriander. mix well.",
+    "Step 10": "pour the tempering over the rasam and add 2 tbsp coriander. mix well."
+  },
+  "Greengram":{
+    "Ingredients":"Green Gram / Pacha payaru-1 cup \n+ Onion-1 chopped \n+ Tomato-2 chopped \n+ Coriander powder / Malli podi-1 tblspn \n+ Red Chilli powder -1tsp \n+ Turmeric powder / Manjal podi-1 tsp \n+ Garam masala powder-1 tsp \n+ Cumin seeds / Jeerakam-1 tsp \n+ Ghee-1 tblspn \n+ Oil-1 tsp \n+ Salt to taste \n+ Sugar -1 tsp \n+ Coriander leaves/Cilantro for garnishing",
+    "Step 1 ": "Pressure cook dal till completely cooked. If you press it with your fingers it should get mashed.",
+    "Step 2": "Heat oil and ghee in a kadai. Crackle some cumin seeds",
+    "Step 3": "Add in onions and cook till golden.",
+    "Step 4": "Add in all spice powders and mix well.",
+    "Step 5": "Throw in the tomatoes and cook till mushy..Add required amount of water and bring that to boil.",
+    "Step 6": "Add in the cooked dal and mix well.",
+    "Step 7": "Season with salt and sugar. Simmer this for 10 mins.",
+    "Step 8": "Garnish with cilantro and serve with roti or rice."
+  },
+  "Dhal":{
+    "Ingredients":"1 tablespoon sesame oil, or olive oil\n + 1 cup white onion, finely chopped\n + 2 cloves garlic, finely chopped\n + 1 tablespoon fresh ginger, finely chopped\n + 4 cups water, or vegetable broth\n + 1 cup dried red lentils, rinsed and picked over\n + 1 teaspoon ground cumin\n + 1 teaspoon ground coriander\n + 1 teaspoon ground turmeric\n + 1/4 teaspoon ground cardamom\n + 1/4 teaspoon ground cinnamon\n + 1/4 teaspoon cayenne pepper\n + 1 teaspoon salt, or to taste\n + 2 tablespoons tomato paste",
+    "Step 1 ": "Gather the ingredients.",
+    "Step 2": "In a 3-quart stockpot or other medium-sized soup pot, heat the sesame oil over medium heat. Once the oil is hot, add the onion, garlic, and ginger. Cook, stirring often, until the chopped onion is translucent, about 6 minutes.",
+    "Step 3": "Stirring constantly, add the water or broth, lentils, cumin, coriander, turmeric, cardamom, cinnamon, cayenne pepper, and salt. Bring to a low boil, then turn down the heat to low, cover and let the soup simmer for about 20 minutes, or until lentils are very tender.",
+    "Step 4": "Stir in the tomato paste until well combined. Cook several minutes more, or until the soup is at the desired temperature and consistency, adding more water to the dahl if needed.",
+    "Step 5": "Garnish with a dollop of dairy-free soy yogurt if desired. Serve hot and enjoy."
+}
 }
