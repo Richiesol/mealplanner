@@ -86,6 +86,7 @@ function weekDishStartCooking(event) {
 function buttonclick(event) {
   let target = event.target;
   dishname = target.closest(".innerbox").firstElementChild.nextElementSibling;
+  currentdishname.innerText = dishname.innerText;
   let mealtype = target.closest(".box").lastElementChild;
   changedish.setAttribute("list", mealtype.innerText.toLowerCase());
   changedish.value = dishname.innerText;
