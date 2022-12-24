@@ -1,0 +1,363 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's cooking</title>
+    <link rel="stylesheet" href="stylesheet_main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Akaya Kanadaka"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas Neue"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya SC"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Beau Rivage"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modalbox">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="editcontent">
+            <img src="images/Rectangle 16food_image.png" class="editboximage" />
+            <label class="currentdishname" id="currentdishname"
+              >Chapathi & Curry</label
+            >
+            <div class="receipetime">
+              <label class="cookingtime">Cooking Time : </label>
+              <label for="duration" class="duration">10 min</label>
+            </div>
+            <div class="changemenu">
+              <label for="changedish" class="changedish" id="changedish">
+                Change dish :
+              </label>
+              <input
+                type="text"
+                class="changedishtextbox"
+                value="Chapathi & Curry"
+                id="name_of_breakfast"
+                required
+              />
+              <datalist id="breakfast">
+                <option>Dosa & Sambar</option>
+                <option>Poori & AlooBhaji</option>
+                <option>Pongal & Chutney</option>
+                <option>Chapathi & Curry</option>
+              </datalist>
+              <datalist id="lunch">
+                <option>Rice & Sambar</option>
+                <option>Rice & Rasam</option>
+                <option>Rice & Dhal</option>
+                <option>Rice & Greengram</option>
+              </datalist>
+              <datalist id="dinner">
+                <option>Dosa & Sambar</option>
+                <option>Chapathi & Curry</option>
+                <option>Pongal & Chutney</option>
+                <option>Idly & Chutney</option>
+              </datalist>
+            </div>
+            <button
+              id="changebutton"
+              class="changebutton"
+              onclick="change_dish(event)"
+            >
+              Change
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="startcookingmodal" class="modal">
+      <div class="modalbox">
+        <div class="start-cooking-modal-content">
+          <span class="closemodal">&times;</span>
+          <div class="receipe-content">
+            <div class="receipe">
+              <label
+                for="title"
+                id="recipename"
+                class="recipetitle"
+              ></label>
+              <label
+                for="title"
+                id="recipetitle"
+                class="recipetitle"
+              ></label>
+              <p id="text" class="receipetext"></p>
+            </div>
+            <div class="imagecontainer">
+              <img
+                src="images/circle-arrow-left-solid.svg"
+                alt=""
+                class="arrowimage"
+                id="leftarrow"
+              />
+              <div class="time" id="time">
+                <div for="timer" class="timer">
+                  <label  id="minutes" contenteditable="true">00</label>:
+                  <label  id="seconds" contenteditable="true">00</label>
+                </div>
+                <img src="images/Vector.png" alt="" class="play" id="play"/>
+                <img src="images/circle-stop-solid (1) 1stop_button.png" alt="" class="pause" id="pause"/>
+              </div>
+              <img
+                src="images/circle-arrow-right-solid.svg"
+                alt=""
+                class="arrowimage"
+                id="rightarrow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="weekmodal" class="modal">
+      <div class="modalbox">
+        <div class="modal-content">
+          <button class="closedish">&times;</button>
+          <div class="innerbox viewdish">
+            <img src="images/Rectangle 16food_image.png" class="dish_image" />
+            <label class="week-dish" id="weekdish">Rice & Sambar</label>
+            <div class="buttonpannel">
+              <button class="edit" onclick="weekdishbuttonclick(event)">Edit</button>
+              <button class="start" onclick="weekDishStartCooking(event)">
+                Start Cooking
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="logo">
+        <label for="brandname" class="brandname">What's Cooking?</label>
+      </div>
+      <div class="profile">
+        <img src="images/Group 36profile.png" alt="asdf" class="profile_pic" />
+      </div>
+    </div>
+    <div class="todays_menu">
+      <div class="menu_title">
+        <label for="todaymenu" class="todaymenu_text">Today's Menu</label>
+      </div>
+      <div class="boxcontainer">
+        <div class="box">
+          <div class="innerbox">
+            <img src="images/Rectangle 16food_image.png" class="dish_image" />
+            <label class="dishname breakfastdish" id="dishname">Chapathi & Curry</label>
+            <div class="buttonpannel">
+              <button class="edit" id="edit" onclick="buttonclick(event)">
+                Edit
+              </button>
+              <button
+                class="start"
+                id="startcookingbutton"
+                onclick="startcooking(event)"
+              >
+                Start Cooking
+              </button>
+            </div>
+          </div>
+          <label for="breakfast" class="menu_text">Breakfast</label>
+        </div>
+        <div class="box">
+          <div class="innerbox">
+            <img src="images/Rectangle 16food_image.png" class="dish_image" />
+            <label class="lunchdish dishname" id="lunchtoday">Rice & Sambar</label>
+            <div class="buttonpannel">
+              <button class="edit" onclick="buttonclick(event)">Edit</button>
+              <button class="start" onclick="startcooking(event)">
+                Start Cooking
+              </button>
+            </div>
+          </div>
+          <label for="breakfast" class="menu_text">Lunch</label>
+        </div>
+        <div class="box">
+          <div class="innerbox">
+            <img src="images/Rectangle 16food_image.png" class="dish_image"/>
+            <label class="dinnerdish dishname" id="dinnertoday">Idly & Chutney</label>
+            <div class="buttonpannel">
+              <button class="edit" onclick="buttonclick(event)">Edit</button>
+              <button class="start" onclick="startcooking(event)">
+                Start Cooking
+              </button>
+            </div>
+          </div>
+          <label for="breakfast" class="menu_text">Dinner</label>
+        </div>
+      </div>
+    </div>
+    <div class="planner_container">
+      <div class="planner_title">
+        <label for="todaymenu" class="weeks todaymenu_text"
+          >This Week's plan</label
+        >
+      </div>
+      <div class="table">
+        <div class="weekdays">
+          <div class="days space">
+            <label for="day" class="day">Sunday</label>
+          </div>
+          <div class="days">
+            <label for="day" class="day">Monday</label>
+          </div>
+          <div class="days">
+            <label for="day" class="day">Tuesday</label>
+          </div>
+          <div class="days">
+            <label for="day" class="day">Wednesday</label>
+          </div>
+          <div class="days">
+            <label for="day" class="day">Thursday</label>
+          </div>
+          <div class="days">
+            <label for="day" class="day">Friday</label>
+          </div>
+          <div class="days">
+            <label for="day" class="day">Satuday</label>
+          </div>
+          
+        </div>
+        <div class="meal">
+          <div class="breakfast">
+            <img src="images/breakfast.png" alt="" class="breakfast_image" />
+            <label for="breakfast" class="meal_label">Breakfast</label>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="sunday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="sunday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="monday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="tuesday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="wednesday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="friday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"id="saturday-breakfast">Chapathi & Curry</label>
+            </button>
+          </div>
+        </div>
+        <div class="meal lunch">
+          <div class="breakfast">
+            <img src="images/fried-rice.png" alt="" class="breakfast_image" />
+            <label for="breakfast" class="meal_label">Lunch</label>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="sunday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="monday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="tuesday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="wednesday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="thursday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="friday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="saturday-lunch">Rice & Sambar</label>
+            </button>
+          </div>
+        </div>
+        <div class="meal dinner">
+          <div class="breakfast">
+            <img src="images/meal.png" alt="" class="breakfast_image" />
+            <label for="breakfast" class="meal_label">Dinner</label>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"  id="sunday-dinner">Idly & Chutney</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="monday-dinner">Idly & Chutney</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="tuesday-dinner">Idly & Chutney</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="wednesday-dinner">Idly & Chutney</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="thurday-dinner">Idly & Chutney</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext" id="friday-dinner">Idly & Chutney</label>
+            </button>
+          </div>
+          <div class="dish">
+            <button class="dishbutton" onclick="weekdishbutton(event)">
+              <label for="maindish" class="dishtext"id="saturday-dinner">Idly & Chutney</label> 
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

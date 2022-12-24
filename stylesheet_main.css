@@ -1,0 +1,475 @@
+body{
+  margin:0px;
+}
+.header {
+  display: flex;
+  height: 15%;
+  background-color: #fff;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.21);
+  box-shadow: 0 0 20px #ccc;
+  padding: 0 1% 0 1%;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  width: 65%;
+  align-items: center;
+}
+.logoicon {
+  width: 10%;
+}
+.brandname {
+  font-family: "Bebas Neue";
+  font-size: 25px;
+  font-weight: 500;
+  width: 10%;
+  text-align: center;
+  color: rgb(251, 10, 10);
+}
+.profile {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  display: flex;
+  justify-content: end;
+}
+.profile_pic {
+  width: 10%;
+  height: min-content;
+}
+.contentarea {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.todays_menu {
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+}
+.menu_title {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+}
+.todaymenu_text {
+  height:100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: Beau Rivage;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 12px;
+}
+.boxcontainer {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  justify-content: space-evenly;
+}
+.box {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  flex-direction: column;
+}
+.innerbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 20px #ccc;
+}
+.dish_image{
+  width:100%;
+  height:50%;
+  border-radius: 5px 5px 0 0 ;
+}
+.dishname{
+  display: flex;
+  height: 25%;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.week-dish{
+  display: flex;
+  height: 25%;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.buttonpannel{
+  display: flex;
+    height: 25%;
+    justify-content: space-evenly;
+}
+.edit{
+  background-color: rgb(251 198 10);
+  font-family: "Alegreya SC";
+  font-size: 15px;
+    border: none;
+    height: 70%;
+    width: 20%;
+    border-radius: 5px;
+}
+.edit:hover{
+  background-color: rgb(255, 210, 49);
+}
+.start{
+  background-color: rgb(251 198 10);
+  font-family: "Alegreya SC";
+  font-size: 15px;
+    border: none;
+    height: 70%;
+    width: 50%;
+    border-radius: 5px;
+}
+.start:hover{
+  background-color: rgb(255, 210, 49);
+}
+.menu_text {
+  font-family: "Alegreya SC";
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+}
+.schedule {
+  display: flex;
+  height:80%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.planner_container{
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  align-items: center;
+}
+.planner_title{
+  display: flex;
+  justify-self: center;
+    width:100%;
+    height:15%;
+}
+.table {
+    width:90%;
+    height:80%;
+    display: flex;
+    background-color: #d3d3d3;
+    justify-content: space-between;
+    padding: 0.5%;
+    border-radius: 10px;
+}
+.weeks{
+  padding-left:5%;
+}
+.weekdays{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  width:17%;
+  height:100%;
+  background-color: white;
+  border-radius: 7px;
+}
+.meal{
+  width:25%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 7px;
+  /* background-color: rgba(255, 255, 255, 0); */
+}
+.days{
+  display: flex;
+  justify-content: center;
+  width:90%;
+  height:10%;
+  background-color: rgb(251, 10, 10);
+  border-radius: 10px;
+}
+.space{
+ margin-top:25%;
+}
+.day{
+  font-family: "Alegreya SC";
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+}
+.breakfast{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:10%;
+  background-color: rgb(199, 130, 130);
+  border-radius: 10px;
+  }
+
+.dish{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  height:10%;
+  background-color: rgb(252, 252, 252);
+  border-radius: 10px;
+}
+.dishbutton{
+  width:100%;
+  height: 100%;
+  border-radius: 10px;
+  border:none;
+}
+.dishbutton:focus{
+  outline:none;
+  cursor: pointer;
+}
+.dishtext{
+  font-size: 25px;
+  font-family: "Alegreya";
+}
+.meal_label{
+  font-family: "Alegreya SC";
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+}
+.breakfast_image{
+  padding:2%;
+  width:10%;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+.modalbox{
+    height: 100%;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+/* Modal Content */
+.modal-content {
+  flex-direction: row-reverse;
+    display: flex;
+    background-color: #fefefe;
+    margin: auto;
+    height: 55%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 50px;
+}
+.start-cooking-modal-content{
+  flex-direction: row-reverse;
+    display: flex;
+    background-color: #fefefe;
+    margin: auto;
+    height: 75%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 50px;
+    justify-content: space-between;
+}
+/* The Close Button */
+.close,.closemodal,.closedish {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border:none;
+  align-self: self-start;
+  height: fit-content;
+}
+button{
+  cursor:pointer
+}
+.close:hover,
+.close:focus ,.closemodal:hover,
+.closemodal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+.editcontent{
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editbox{
+  width:85%;
+  height:30%;
+  border-radius: 5px 5px 0 0 ;
+}
+.editboximage{
+  border-radius: 10px;
+}
+.receipetime{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.cookingtime{
+  display: flex;
+  height: 15%;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.currentdishname{
+  display: flex;
+  height: 15%;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.duration{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+.changemenu{
+  display: flex;
+  align-items: center;
+  height:25%;
+  width:100%;
+}
+.changedish{
+  display: flex;
+  height: 25%;
+  font-family: "Alegreya ";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.changedishtextbox{
+  margin-left: 5%;
+  padding-left:5%;
+  font-family: "Alegreya";
+  font-size: 20px;;
+  width: 65%;
+  height: 50%;
+  border-radius: 10px;
+  border:none;
+  background-color: rgb(199, 199, 199);
+}
+.changedishtextbox:focus{
+  outline:none;
+}
+.changebutton{
+ background-color: rgb(251 198 10);
+ border:none;
+ width: 40%;
+ height: 10%;
+ border-radius: 10px;
+}
+.changebutton:hover{
+  background-color: rgb(252, 214, 77);
+}
+.receipe-content{
+  width:90%;
+}
+.receipe{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  align-items: center;
+  flex-direction: column;
+}
+.imagecontainer{
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  display: flex;
+  
+}
+.time {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  width: 25%;
+  height: 40%;
+}
+.timer {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  height: 50%;
+  font-size: 25px;
+  font-family: "Alatsi";
+  align-items: center;
+}
+.play {
+  display:block;
+  width: 25%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+.pause{
+  display:none;
+  width: 25%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+.arrowimage{
+  height: 50%;
+  width: 15%;
+}
+.receipetext{
+  height: 75%;
+  font-size: 20px;
+  font-family: "Alegreya";
+}
+.recipetitle{
+  width: 60%;;
+  font-size: 20px;
+  font-family: "Alegreya SC";
+  font-weight: 600;
+  text-align: center;
+}
+.viewdish{
+  align-self: center;
+}
+.closedish{
+  align-self: self-start;
+  height: fit-content;
+}

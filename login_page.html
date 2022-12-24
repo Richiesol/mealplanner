@@ -26,7 +26,7 @@
     </div>
     <div class="contentarea">
         <div class="contentbox">
-          <form action="main.html" class="innerbox">
+          <form class="innerbox" onsubmit="login_()" action="main.html">
             <div class="textbox">
               <label for="signin_text" class="signin_text">Sign in</label>
             </div>
@@ -35,6 +35,7 @@
               <input
                 type="email"
                 class="email"
+                id="email"
                 placeholder="Username"
                 size="64"
                 maxlength="30"
@@ -43,17 +44,18 @@
             </div>
             <div class="textbox inputbox">
               <img src="images/Vectorlock.png" alt="" class="passwordicon" />
-              <input type="password" class="password" placeholder="Password" size="64"
+              <input type="password" id="password" class="password" placeholder="Password" size="64"
               maxlength="30"
               required />
             </div>
             <div class="textbox">
               <div class="signup">
-                <button for="signupbutton" class="signupforfree">Log in</button>
+                <button for="signupbutton" id="login" class="signupforfree">Log in</button>
               </div>
             </div>
           </form>
         </div>
     </div>
+    <script src="signin_script.js"></script>
     </body>
     </html>
